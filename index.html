@@ -1,0 +1,872 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Arq.Victor Rojas C.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+			<style type="text/css">
+
+/* Navigation style */
+.nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+	font-size: 14px;
+  text-align: center;
+	background: rgba(255,255,255,0.9);
+	border-bottom: 1px rgba(0,0,0,0.1) solid;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.7;
+	text-transform: uppercase; 
+}
+.nav li {
+  display: inline-block;
+  margin: 0 .5em;
+  	-webkit-transition: background 0.5s ease;
+		-moz-transition: background 0.5s ease;
+        -ms-transition: background 0.5s ease;
+        -o-transition: background 0.5s ease;
+		transition: background 0.5s ease;
+}
+.nav a {
+  display: block;
+  padding: .8em .6em;
+  color: #202021;
+  text-decoration: none;
+}
+.nav a:hover {
+	background-color: #353535;
+color: white;
+
+-webkit-transition: background 0.2s ease-in-out;
+		-moz-transition: background 0.2s ease-in-out;
+        -ms-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+		transition: background 0.2s ease-in-out;
+
+}
+.nav a:active{
+background: black;
+color:white;
+-webkit-transition: background 0.2s ease-in-out;
+		-moz-transition: background 0.2s ease-in-out;
+        -ms-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+		transition: background 0.2s ease-in-out;
+
+}
+
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border-top: 0;
+}
+
+
+}
+/* Styling the toggle menu link and hiding it */
+.nav .navtoogle {
+  display: none;
+  width: 100%;
+  padding: .5em .5em .8em;
+  text-align: left;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+	height: 45px;
+
+	  margin: 0;
+ 	 padding: 0;
+  	list-style: none;
+	font-size: 14px;
+ 	 text-align: center;
+	background: rgba(255,255,255,0.9);
+	border-bottom: 1px rgba(0,0,0,0.1) solid;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.7;
+	text-transform: uppercase; 
+}
+.nav .navtoogle:before {
+content: '\2630';
+  padding-right: .5em;
+  font-size: 1.2em;
+}
+/* The breakpoint here will depend on your content, menu lenght, font size, and so on :) */
+@media (max-width: 680px) {
+  .nav li {
+    margin: 0;
+    display: block;
+    text-align: center;
+  }
+  .nav a {
+    padding: .8em 1.2em .8em;
+  }
+  .js .nav {
+    /* Unhiding the styled menu link */
+  
+    /* When JavaScript is enabled, we hide the menu */
+  
+  }
+  .js .nav .navtoogle {
+    margin: 0;
+    display: block;
+  }
+  .js .nav ul {
+    max-height: 0em;
+    overflow: hidden;
+  }
+  .js .nav .active + ul {
+    max-height: 30em;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+  }
+  /* If JavaScript is disabled, the menu stays open */
+  .no-js .nav ul {
+    max-height: 30em;
+    overflow: hidden;
+  }
+}
+
+
+.header {
+  width: 100%;
+  background: #232323;
+}
+
+  .footer {
+  width: 100%;
+  background: #232323;}
+
+  .portfolio{
+  width: 100%;
+  background: #c9c9c9;
+  }
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio-page .scroll-down {
+    margin-left: 0px;
+}
+
+.portfolio-content {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+
+.portfolio-content figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.portfolio-content .entry-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.9);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s;
+}
+
+.portfolio-content:hover .entry-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.portfolio-content h3 {
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.home-page .portfolio-content h3 {
+    font-size: 3rem;
+}
+
+.portfolio-content h3 a {
+    color: #191919;
+    text-decoration: none;
+}
+
+.portfolio-content ul {
+    padding: 0;
+    margin: 0px 0 0;
+    list-style: none;
+}
+
+.portfolio-content li {
+    margin: 0 0px;
+}
+
+.portfolio-content li a {
+    font-size: 1rem;
+    color: #a6a6a6;
+}
+
+@media screen and (max-width: 1200px) {
+    .blog-page .col-12:nth-of-type(even) .blog-content {
+        flex-flow: row-reverse !important;
+    }
+
+    .blog-page .col-12:nth-of-type(even) .blog-content .entry-content h3::before {
+        right: -50px;
+        left: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-page .col-12:nth-of-type(even) .blog-content .entry-content h3::before {
+        right: -35px;
+    }
+
+
+</style>
+
+<style>
+#projectThumbs .project .project-image .intrinsic div img {
+filter: url("data:image/svg+xml;utf8,<svg%20xmlns = 'http://www.w3.org/2000/svg'><filte…200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale");
+filter: gray;
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+}
+
+#projectThumbs .project .project-image .intrinsic:hover img {
+filter: grayscale(0%);
+-webkit-filter: grayscale(0%);
+filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+}
+ 
+  </style>
+<script type="text/javascript"> The function to change the class
+	var changeClass = function (r,className1,className2) {
+	    var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+	    if( regex.test(r.className) ) {
+	        r.className = r.className.replace(regex,' '+className2+' ');
+	    }
+	    else{
+	        r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+	    }
+	    return r.className;
+	};  
+ 
+	//  Creating our button for smaller screens
+	var menuElements = document.getElementById('navigation');
+	var htmlElement = document.getElementsByTagName("html")[0]
+	menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true">Menu</button>');
+	// Adding a JS class when JS is activated
+	changeClass(document.getElementsByTagName("html")[0], 'no-js', 'js');
+	 
+	//  Toggle the class on click to show / hide the menu
+	document.getElementById('menutoggle').onclick = function() {
+	    changeClass(this, 'navtoogle active', 'navtoogle');
+	}
+	 
+// document click to hide the menu	credits to http://inpx.it/13WjECm
+	document.onclick = function(e) {
+	    var mobileButton = document.getElementById('menutoggle'),
+	        buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+	 
+	    if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+	        changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+	    }
+	}
+</script>
+	</head>
+<header>
+        		<div id="header" class="header">
+
+        		      <section id="footer"><img src="logo.png">
+            <section>
+              <ul class="icons">
+                <li><a href="https://wa.me/5804246669894" class="icon fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-behance"><span class="label">Behance</span></a></li>
+                <li><a href="https://www.facebook.com/Arquiru/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="mailto:arq.victorrojas2716@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+              </ul>
+            </section>
+          </section>
+      </div>
+
+</header>
+
+<div class="container--head">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="1.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Creamos la mejor experiencia para ti!</h3> Desarrollamos proyectos de corto y largo alcance.
+        </div>
+      </div>
+      <div class="item">
+        <img src="2.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Arquitectura y diseño...</h3> Visualiza los mejores espacios que desearias tener antes de ejecutarlos.
+        </div>
+      </div>
+      <div class="item">
+        <img src="3.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Diseño industrial...</h3> Desde diseño a la ejecución de tu proyecto.
+        </div>
+      </div>
+      <div class="item">
+        <img src="4.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Trabajo especial de grado...</h3> Tenemos todo lo que necesitas para desarrollar tu tesis.
+        </div>
+      </div>
+      <div class="item">
+        <img src="5.jpg" alt="05.jpg" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Tienes una idea? Contactanos nosotros te apoyamos en tu emprendimiento</h3> La creatividad abre un mundo ilimitado de oportunidades.
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</div>
+
+
+
+<!-- Fontawesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+  
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,300' rel='stylesheet' type='text/css'>
+
+
+  		<nav id="navigation" class="nav" role="navigation" onclick="">
+			<ul>
+				<li><a href="index.html">Proyectos</a></li>
+				<li><a href="animacion.html">Animación</a></li>
+				<li><a href="vr.html">Realidad Virtual</a></li>
+				<li><a href="clientes.html">Clientes</a></li>
+				<li><a href="contacto.html">Contactos</a></li>
+			</ul>
+		</nav>
+    <script  src="js/index.js"></script>
+
+<div id="portfolio">
+	 <div class="nav-bar-sep d-lg-none"></div>
+
+<div class="outer-container home-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/1.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Vivienda Barbot</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Freelancer</a></li>
+                            <li><a href="#">Brasil</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/2.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Pier Gaiti & Arq.Dayana Jimenez</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/3.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Auditorio</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Migración</a></li>
+                            <li><a href="#">Perú</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/4.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Vivienda modular</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Planta 3D</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/5.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq. Oscar Vera</a></li>
+                            <li><a href="#">Merida <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/6.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq. Oscar Vera</a></li>
+                            <li><a href="#">Merida <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/7.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Remodelación de Apartamento</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Freelancer</a></li>
+                            <li><a href="#">E.E.U.U.</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/8.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Restaurant</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arquidigital</a></li>
+                            <li><a href="#">Maracaibo<br/>Venezuela</a></a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/9.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Farmacia SAAS</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arquidigital</a></li>
+                            <li><a href="#">Maracaibo<br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/10.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq. Jesus Torrealba</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/11.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Susana Carruyo</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/12.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Roberto Leon</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+             <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/13.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Complejo turistico Paraguaná</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Freelancer</a></li>
+                            <li><a href="#">Falcón <br/> Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/14.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Aula Magna</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Universidad Rafael Urdaneta</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/15.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Complejo Turistico de Paraguaná</a></li>
+                            <li><a href="#">Falcón <br/> Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/16.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Vivienda unifamiliar</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Vista Aerea 3D</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/17.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Vivienda unifamiliar</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Propuesta</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/18.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Susana Carruyo</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/19.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Susana Carruyo</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/20.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Oscar Vera</a></li>
+                            <li><a href="#">Merida<br/>Venezuela</a></a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/21.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Maria Sanchez</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/22.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Remodelacón de Apartamento</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Freelancer</a></li>
+                            <li><a href="#">E.E.U.U.</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/23.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Hadia El Kadi</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/24.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Pier Gaiti & Arq.Dayana Jimenez</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/25.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Pier Gaiti & Arq.Dayana Jimenez</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/26.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Cafetin</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Ministerio del Ambiente</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container-fluid -->
+</div><!-- .outer-container -->
+
+
+<div id="footer">
+	          <section id="footer">
+              <center>
+              <ul class="copyright">
+                <li>&copy; Derechos Reservados .:.2019.:.</li><li>Design: <a href="#">Arq.Victor Rojas C.</a></li>
+              </ul>
+          </center>
+            </section>
+          </section>
+
+</div>
+
+
+      </div>
+
+	</body>
+</html>
