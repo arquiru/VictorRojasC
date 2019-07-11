@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Arq.Victor Rojas C.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+			<style type="text/css">
+
+/* Navigation style */
+.nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+	font-size: 14px;
+  text-align: center;
+	background: rgba(255,255,255,0.9);
+	border-bottom: 1px rgba(0,0,0,0.1) solid;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.7;
+	text-transform: uppercase; 
+}
+.nav li {
+  display: inline-block;
+  margin: 0 .5em;
+  	-webkit-transition: background 0.5s ease;
+		-moz-transition: background 0.5s ease;
+        -ms-transition: background 0.5s ease;
+        -o-transition: background 0.5s ease;
+		transition: background 0.5s ease;
+}
+.nav a {
+  display: block;
+  padding: .8em .6em;
+  color: #202021;
+  text-decoration: none;
+}
+.nav a:hover {
+	background-color: #353535;
+color: white;
+
+-webkit-transition: background 0.2s ease-in-out;
+		-moz-transition: background 0.2s ease-in-out;
+        -ms-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+		transition: background 0.2s ease-in-out;
+
+}
+.nav a:active{
+background: black;
+color:white;
+-webkit-transition: background 0.2s ease-in-out;
+		-moz-transition: background 0.2s ease-in-out;
+        -ms-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+		transition: background 0.2s ease-in-out;
+
+}
+
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border-top: 0;
+}
+
+
+}
+/* Styling the toggle menu link and hiding it */
+.nav .navtoogle {
+  display: none;
+  width: 100%;
+  padding: .5em .5em .8em;
+  text-align: left;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+	height: 45px;
+
+	  margin: 0;
+ 	 padding: 0;
+  	list-style: none;
+	font-size: 14px;
+ 	 text-align: center;
+	background: rgba(255,255,255,0.9);
+	border-bottom: 1px rgba(0,0,0,0.1) solid;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.7;
+	text-transform: uppercase; 
+}
+.nav .navtoogle:before {
+content: '\2630';
+  padding-right: .5em;
+  font-size: 1.2em;
+}
+/* The breakpoint here will depend on your content, menu lenght, font size, and so on :) */
+@media (max-width: 680px) {
+  .nav li {
+    margin: 0;
+    display: block;
+    text-align: center;
+  }
+  .nav a {
+    padding: .8em 1.2em .8em;
+  }
+  .js .nav {
+    /* Unhiding the styled menu link */
+  
+    /* When JavaScript is enabled, we hide the menu */
+  
+  }
+  .js .nav .navtoogle {
+    margin: 0;
+    display: block;
+  }
+  .js .nav ul {
+    max-height: 0em;
+    overflow: hidden;
+  }
+  .js .nav .active + ul {
+    max-height: 30em;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+  }
+  /* If JavaScript is disabled, the menu stays open */
+  .no-js .nav ul {
+    max-height: 30em;
+    overflow: hidden;
+  }
+}
+
+
+.header {
+  width: 100%;
+  background: #232323;
+}
+
+  .footer {
+  width: 100%;
+  background: #232323;}
+
+  .portfolio{
+  width: 100%;
+  background: #c9c9c9;
+  }
+
+
+  </style>
+<script type="text/javascript"> The function to change the class
+	var changeClass = function (r,className1,className2) {
+	    var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+	    if( regex.test(r.className) ) {
+	        r.className = r.className.replace(regex,' '+className2+' ');
+	    }
+	    else{
+	        r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+	    }
+	    return r.className;
+	};  
+ 
+	//  Creating our button for smaller screens
+	var menuElements = document.getElementById('navigation');
+	var htmlElement = document.getElementsByTagName("html")[0]
+	menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true">Menu</button>');
+	// Adding a JS class when JS is activated
+	changeClass(document.getElementsByTagName("html")[0], 'no-js', 'js');
+	 
+	//  Toggle the class on click to show / hide the menu
+	document.getElementById('menutoggle').onclick = function() {
+	    changeClass(this, 'navtoogle active', 'navtoogle');
+	}
+	 
+// document click to hide the menu	credits to http://inpx.it/13WjECm
+	document.onclick = function(e) {
+	    var mobileButton = document.getElementById('menutoggle'),
+	        buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+	 
+	    if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+	        changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+	    }
+	}
+</script>
+	</head>
+<header>
+        		<div id="header" class="header">
+
+        		      <section id="footer"><img src="logo.png">
+            <section>
+              <ul class="icons">
+                <li><a href="#" class="icon fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-behance"><span class="label">Behance</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="mailto:arq.victorrojas2716@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+              </ul>
+            </section>
+          </section>
+      </div>
+
+</header>
+
+<div class="container--head">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="1.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Creamos la mejor experiencia para ti!</h3> Desarrollamos proyectos de corto y largo alcance.
+        </div>
+      </div>
+      <div class="item">
+        <img src="2.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Arquitectura y diseño...</h3> Visualiza los mejores espacios que desearias tener antes de ejecutarlos.
+        </div>
+      </div>
+      <div class="item">
+        <img src="3.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Diseño industrial...</h3> Desde diseño a la ejecución de tu proyecto.
+        </div>
+      </div>
+      <div class="item">
+        <img src="4.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Trabajo especial de grado...</h3> Tenemos todo lo que necesitas para desarrollar tu tesis.
+        </div>
+      </div>
+      <div class="item">
+        <img src="5.jpg" alt="05.jpg" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Tienes una idea? Contactanos nosotros te apoyamos en tu emprendimiento</h3> La creatividad abre un mundo ilimitado de oportunidades.
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</div>
+
+
+
+<!-- Fontawesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+  
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,300' rel='stylesheet' type='text/css'>
+
+
+  		<nav id="navigation" class="nav" role="navigation" onclick="">
+			<ul>
+				<li><a href="index.html">Proyectos</a></li>
+				<li><a href="animacion.html">Animación</a></li>
+				<li><a href="vr.html">Realidad Virtual</a></li>
+				<li><a href="clientes.html">Clientes</a></li>
+				<li><a href="contacto.html">Contactos</a></li>
+			</ul>
+		</nav>
+    <script  src="js/index.js"></script>
+
+<div id="contacto">
+  arq.victorrojas2716@gmail.com <br/>
+  +58 0424 6669894
+
+</div>
+
+<div id="footer">
+	          <section id="footer">
+              <center>
+              <ul class="copyright">
+                <li>&copy; Derechos Reservados .:.2019.:.</li><li>Design: <a href="#">Arq.Victor Rojas C.</a></li>
+              </ul>
+          </center>
+            </section>
+          </section>
+
+</div>
+
+
+      </div>
+
+	</body>
+</html>
