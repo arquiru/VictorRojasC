@@ -1,0 +1,928 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+    <meta name="google-site-verification" content="lA5Smcxr0lPJfL8Q6d_dD_VlhtkqsHJLp64vh9rV6gw" />
+    
+		<title>Arq.Victor Rojas C.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+			<style type="text/css">
+
+/* Navigation style */
+.nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+	font-size: 14px;
+  text-align: center;
+	background: rgba(255,255,255,0.9);
+	border-bottom: 1px rgba(0,0,0,0.1) solid;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.7;
+	text-transform: uppercase; 
+}
+.nav li {
+  display: inline-block;
+  margin: 0 .5em;
+  	-webkit-transition: background 0.5s ease;
+		-moz-transition: background 0.5s ease;
+        -ms-transition: background 0.5s ease;
+        -o-transition: background 0.5s ease;
+		transition: background 0.5s ease;
+}
+.nav a {
+  display: block;
+  padding: .8em .6em;
+  color: #202021;
+  text-decoration: none;
+}
+.nav a:hover {
+	background-color: #353535;
+color: white;
+
+-webkit-transition: background 0.2s ease-in-out;
+		-moz-transition: background 0.2s ease-in-out;
+        -ms-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+		transition: background 0.2s ease-in-out;
+
+}
+.nav a:active{
+background: black;
+color:white;
+-webkit-transition: background 0.2s ease-in-out;
+		-moz-transition: background 0.2s ease-in-out;
+        -ms-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+		transition: background 0.2s ease-in-out;
+
+}
+
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border-top: 0;
+}
+
+
+}
+/* Styling the toggle menu link and hiding it */
+.nav .navtoogle {
+  display: none;
+  width: 100%;
+  padding: .5em .5em .8em;
+  text-align: left;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+	height: 45px;
+
+	  margin: 0;
+ 	 padding: 0;
+  	list-style: none;
+	font-size: 14px;
+ 	 text-align: center;
+	background: rgba(255,255,255,0.9);
+	border-bottom: 1px rgba(0,0,0,0.1) solid;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.7;
+	text-transform: uppercase; 
+}
+.nav .navtoogle:before {
+content: '\2630';
+  padding-right: .5em;
+  font-size: 1.2em;
+}
+/* The breakpoint here will depend on your content, menu lenght, font size, and so on :) */
+@media (max-width: 680px) {
+  .nav li {
+    margin: 0;
+    display: block;
+    text-align: center;
+  }
+  .nav a {
+    padding: .8em 1.2em .8em;
+  }
+  .js .nav {
+    /* Unhiding the styled menu link */
+  
+    /* When JavaScript is enabled, we hide the menu */
+  
+  }
+  .js .nav .navtoogle {
+    margin: 0;
+    display: block;
+  }
+  .js .nav ul {
+    max-height: 0em;
+    overflow: hidden;
+  }
+  .js .nav .active + ul {
+    max-height: 30em;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+  }
+  /* If JavaScript is disabled, the menu stays open */
+  .no-js .nav ul {
+    max-height: 30em;
+    overflow: hidden;
+  }
+}
+
+
+.header {
+  width: 100%;
+  background: #232323;
+}
+
+  .footer {
+  width: 100%;
+  background: #232323;}
+
+  .portfolio{
+  width: 100%;
+  background: #c9c9c9;
+  }
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio-page .scroll-down {
+    margin-left: 0px;
+}
+
+.portfolio-content {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+
+.portfolio-content figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.portfolio-content .entry-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.9);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s;
+}
+
+.portfolio-content:hover .entry-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.portfolio-content h3 {
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.home-page .portfolio-content h3 {
+    font-size: 3rem;
+}
+
+.portfolio-content h3 a {
+    color: #191919;
+    text-decoration: none;
+}
+
+.portfolio-content ul {
+    padding: 0;
+    margin: 0px 0 0;
+    list-style: none;
+}
+
+.portfolio-content li {
+    margin: 0 0px;
+}
+
+.portfolio-content li a {
+    font-size: 1rem;
+    color: #a6a6a6;
+}
+
+@media screen and (max-width: 1200px) {
+    .blog-page .col-12:nth-of-type(even) .blog-content {
+        flex-flow: row-reverse !important;
+    }
+
+    .blog-page .col-12:nth-of-type(even) .blog-content .entry-content h3::before {
+        right: -50px;
+        left: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-page .col-12:nth-of-type(even) .blog-content .entry-content h3::before {
+        right: -35px;
+    }
+
+
+</style>
+
+  <link rel='stylesheet' id='validate-engine-css-css'  href='https://www.imperiovcc.com/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=2.14' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.imperiovcc.com/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://www.imperiovcc.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.5.3' media='all' />
+<link rel='stylesheet' id='wc-block-vendors-style-css'  href='https://www.imperiovcc.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style.css?ver=3.8.1' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='https://www.imperiovcc.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=3.8.1' media='all' />
+<link rel='stylesheet' id='jquery-selectBox-css'  href='https://www.imperiovcc.com/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox.css?ver=1.2.0' media='all' />
+<link rel='stylesheet' id='yith-wcwl-main-css'  href='https://www.imperiovcc.com/wp-content/plugins/yith-woocommerce-wishlist/assets/css/style.css?ver=3.0.17' media='all' />
+<style id='yith-wcwl-main-inline-css'>
+.yith-wcwl-share li a{color: #FFFFFF;}.yith-wcwl-share li a:hover{color: #FFFFFF;}.yith-wcwl-share a.facebook{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.facebook:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.twitter{background: #45AFE2; background-color: #45AFE2;}.yith-wcwl-share a.twitter:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.pinterest{background: #AB2E31; background-color: #AB2E31;}.yith-wcwl-share a.pinterest:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.email{background: #FBB102; background-color: #FBB102;}.yith-wcwl-share a.email:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.whatsapp{background: #00A901; background-color: #00A901;}.yith-wcwl-share a.whatsapp:hover{background: #39599E; background-color: #39599E;}
+</style>
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://www.imperiovcc.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.2.23' media='all' />
+<style id='rs-plugin-settings-inline-css'>
+#rs-demo-id {}
+.tparrows:before{color:#111111;text-shadow:0 0 3px #fff;}.revslider-initialised .tp-loader{z-index:18;}
+</style>
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='yith_wcas_frontend-css'  href='https://www.imperiovcc.com/wp-content/plugins/yith-woocommerce-ajax-search/assets/css/yith_wcas_ajax_search.css?ver=1.8.6' media='all' />
+<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'  href='//www.imperiovcc.com/wp-content/plugins/woocommerce/assets/css/prettyPhoto.css?ver=5.5.3' media='all' />
+<link rel='stylesheet' id='jr-insta-styles-css'  href='https://www.imperiovcc.com/wp-content/plugins/instagram-slider-widget/assets/css/jr-insta.css?ver=1.8.4' media='all' />
+<link rel='stylesheet' id='wis_font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.5.3' media='all' />
+<link rel='stylesheet' id='wis_instag-slider-css'  href='https://www.imperiovcc.com/wp-content/plugins/instagram-slider-widget/assets/css/instag-slider.css?ver=1.8.4' media='all' />
+<link rel='stylesheet' id='wis_wis-header-css'  href='https://www.imperiovcc.com/wp-content/plugins/instagram-slider-widget/assets/css/wis-header.css?ver=1.8.4' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='https://www.imperiovcc.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.5.0' media='all' />
+<link rel='stylesheet' id='porto-google-fonts-css'  href='//fonts.googleapis.com/css?family=Poppins%3A200%2C300%2C400%2C500%2C600%2C700%2C800%7CShadows+Into+Light%3A400%2C700%7COpen+Sans%3A400%2C600&#038;ver=5.5.3' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://www.imperiovcc.com/wp-content/uploads/porto_styles/bootstrap.css?ver=6.0.1' media='all' />
+<link rel='stylesheet' id='porto-plugins-css'  href='https://www.imperiovcc.com/wp-content/themes/porto/css/plugins.css?ver=5.5.3' media='all' />
+<link rel='stylesheet' id='porto-theme-css'  href='https://www.imperiovcc.com/wp-content/themes/porto/css/theme.css?ver=5.5.3' media='all' />
+<link rel='stylesheet' id='porto-shortcodes-css'  href='https://www.imperiovcc.com/wp-content/themes/porto/css/shortcodes.css?ver=6.0.1' media='all' />
+<link rel='stylesheet' id='porto-theme-shop-css'  href='https://www.imperiovcc.com/wp-content/themes/porto/css/theme_shop.css?ver=5.5.3' media='all' />
+<link rel='stylesheet' id='porto-dynamic-style-css'  href='https://www.imperiovcc.com/wp-content/uploads/porto_styles/dynamic_style.css?ver=6.0.1' media='all' />
+<link rel='stylesheet' id='porto-style-css'  href='https://www.imperiovcc.com/wp-content/themes/porto/style.css?ver=5.5.3' media='all' />
+<style id='porto-style-inline-css'>
+.vc_custom_1579741339165{padding-top: 4.5rem !important;padding-bottom: 2.5rem !important;background-color: #111111 !important;}
+#header .logo,.side-header-narrow-bar-logo{max-width:190px}@media (min-width:1220px){#header .logo{max-width:111px}}@media (max-width:991px){#header .logo{max-width:111px}}@media (max-width:767px){#header .logo{max-width:80px}}#header.sticky-header .logo{max-width:100px}@media (min-width:992px){}#header .header-main .header-left,#header .header-main .header-center,#header .header-main .header-right,.fixed-header #header .header-main .header-left,.fixed-header #header .header-main .header-right,.fixed-header #header .header-main .header-center{padding-top:30px;padding-bottom:30px}@media (max-width:991px){#header .header-main .header-left,#header .header-main .header-center,#header .header-main .header-right,.fixed-header #header .header-main .header-left,.fixed-header #header .header-main .header-right,.fixed-header #header .header-main .header-center{padding-top:12px;padding-bottom:12px}}.page-top .page-title-wrap{line-height:0}.page-top .page-title:not(.b-none):after{content:'';position:absolute;width:100%;left:0;border-bottom:1px solid #111111;bottom:-13px}body.single-product .page-top .breadcrumbs-wrap{padding-right:55px}@media (min-width:1500px){.left-sidebar.col-lg-3,.right-sidebar.col-lg-3{-ms-flex:0 0 20%;flex:0 0 20%;max-width:20%}.main-content.col-lg-9{-ms-flex:0 0 80%;flex:0 0 80%;max-width:80%}.main-content.col-lg-6{-ms-flex:0 0 60%;flex:0 0 60%;max-width:60%}}#login-form-popup{position:relative;width:80%;max-width:525px;margin-left:auto;margin-right:auto}#login-form-popup .featured-box{margin-bottom:0;box-shadow:none;border:none;border-radius:0}#login-form-popup .featured-box .box-content{padding:45px 36px 30px;border:none}#login-form-popup .featured-box h2{text-transform:uppercase;font-size:15px;letter-spacing:.05em;font-weight:600;line-height:2}#login-form-popup .porto-social-login-section{margin-top:20px}.porto-social-login-section{background:#f4f4f2;text-align:center;padding:20px 20px 25px}.porto-social-login-section p{text-transform:uppercase;font-size:12px;color:#111111;font-weight:600;margin-bottom:8px}#login-form-popup .col2-set{margin-left:-20px;margin-right:-20px}#login-form-popup .col-1,#login-form-popup .col-2{padding-left:20px;padding-right:20px}@media (min-width:992px){#login-form-popup .col-1{border-right:1px solid #f5f6f6}}#login-form-popup .input-text{box-shadow:none;padding-top:10px;padding-bottom:10px;border-color:#ddd;border-radius:2px;line-height:1.5 !important}#login-form-popup .form-row{margin-bottom:20px}#login-form-popup .woocommerce-privacy-policy-text{display:none}#login-form-popup .button{border-radius:2px;padding:18px 24px;text-shadow:none;font-family:Poppins,sans-serif;font-size:12px;letter-spacing:-0.025em}#login-form-popup label.inline{margin-top:15px;float:right;position:relative;cursor:pointer;line-height:1.5}#login-form-popup label.inline input[type=checkbox]{opacity:0;margin-right:8px;margin-top:0;margin-bottom:0}#login-form-popup label.inline span:before{content:'';position:absolute;border:1px solid #ddd;border-radius:1px;width:16px;height:16px;left:0;top:0;text-align:center;line-height:15px;font-family:'Font Awesome 5 Free';font-weight:900;font-size:9px;color:#aaa}#login-form-popup label.inline input[type=checkbox]:checked + span:before{content:'\f00c'}#login-form-popup .social-button i{font-size:16px;margin-right:8px}#login-form-popup p.status{color:#111111}.porto-social-login-section .google-plus{background:#dd4e31}.porto-social-login-section .facebook{background:#3a589d}.porto-social-login-section .twitter{background:#1aa9e1}.featured-box .porto-social-login-section i{color:#fff}.porto-social-login-section .social-button:hover{background:var(--primary)}html.panel-opened body > .mfp-bg{z-index:9042}html.panel-opened body > .mfp-wrap{z-index:9043}#header .porto-view-switcher li.menu-item > a > [class*='flag-']{display:none}#mini-cart{font-size:25px !important}#header .porto-view-switcher>li.menu-item>a,#header .top-links>li.menu-item>a{font-size:0.75rem;font-weight:700}#header a{color:inherit}@media (max-width:991px){#header .porto-view-switcher,#header .top-links{display:none}.header-has-center .header-row>div:not(.header-center){flex:none}}@media (max-width:1599px){#header .header-main .header-left{flex:none}}@media (min-width:1600px){.d-sl-block{display:block !important}}.container-fluid,body.wide .container:not(.inner-container),.page-top > .container:not(.inner-container){padding-left:4vw;padding-right:4vw;max-width:none}.container-fluid .vc_row:not(.porto-inner-container){padding-left:calc(4vw - 10px);padding-right:calc(4vw - 10px)}.container-fluid .vc_row,.container-fluid .vc_section{margin-left:-4vw;margin-right:-4vw}.container-fluid .vc_row .vc_row{padding-left:0;padding-right:0}.left-sidebar,.right-sidebar,.main-content{padding-top:0}.page-top{margin-bottom:30px}.img-thumbnail{background:none}.content-row p{line-height:2;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;color:#555}ul.scene{list-style:none}ul.scene li.layer{width:100%;height:100%}.owl-carousel ul.scene li.layer img{width:auto}.owl-carousel ul.scene{height:100%;margin-bottom:0}.products-filter .section-title{font-size:1.125rem;letter-spacing:-.01em;margin-bottom:15px;color:#111}.porto-products.show-category .product-categories{margin-bottom:2rem}.porto-products.show-category .product-categories a{text-transform:uppercase;font-size:12px;font-weight:600;padding-left:24px}.porto-products.show-category .product-categories a:before{content:'' !important;width:14px;height:14px;border:1px solid #d6d6d6;background:#fff;top:50%;transform:translateY(-50%)}.porto-products.show-category .product-categories .current a:after{content:'';width:8px;height:8px;position:absolute;background:#111;top:50%;transform:translateY(-50%);left:3px}.porto-products.show-category .products-filter+div{padding-left:4vw;padding-right:0;margin-bottom:50px;letter-spacing:-.025em}@media (max-width:767px){.porto-products.show-category .products-filter+div{padding-left:0}}.fullscreen-carousel{max-height:80vw}.fullscreen-carousel .porto-ibanner > img{height:100%}.btn{letter-spacing:.01em;font-weight:700}.porto-ibanner .btn-modern.btn-md{font-size:.75em;padding:1.3em 3.25em}.porto-ibanner .vc_btn3-center > .btn-md{padding-left:4.5em;padding-right:4.5em}.porto-ibanner .btn-modern.btn-xl{font-size:1.05em}.ls-200 > .btn{letter-spacing:.2em}.testimonial.testimonial-style-2 blockquote,.testimonial.testimonial-style-2 blockquote p{font-family:inherit}.testimonial.testimonial-style-2 blockquote p{font-style:normal;line-height:2;font-size:18px;padding:0 40px;color:#555;font-weight:300}.testimonial.testimonial-style-2 .testimonial-author strong{font-size:16px;font-weight:500;margin-bottom:4px}.testimonial.testimonial-style-2 .testimonial-author span{font-size:15px;letter-spacing:.2em}.testimonial.testimonial-style-2 .testimonial-author .unchecked{color:#9b9b9b}@media (max-width:480px){.porto-ibanner-layer{font-size:0.6rem}}.tab-content{background:none}.woocommerce-pagination.load-more .next{margin:12px 40px;border:1px solid #000;width:auto;display:inline-block;letter-spacing:.075em;color:#000;padding:18px 55px}.product-images .img-thumbnail .inner{border-width:0}.quickview-wrap .product-images .img-thumbnail .inner{border-width:1px}@media (min-width:768px){.footer-top .container{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap}.footer-top .widget{margin:0}}.footer-top p{font-size:.8125rem}.footer-top .wysija-input,.footer-top .wysija-submit{height:48px;box-shadow:none !important;font-size:12px}.footer-top .wysija-input{border:none;background:#fff;padding-left:1.5rem;min-width:23vw}.footer-top .wysija-submit{font-weight:700;padding:0 2.5em;text-transform:uppercase;letter-spacing:.2em}.footer-top .wysija-paragraph{margin-bottom:0}.footer-top .follow-us .share-links a{box-shadow:none;font-size:1.125rem;width:2.5rem;height:2.5rem}.footer-top > .container{padding-top:2rem}.footer-top > .container:after,#footer .footer-main>.container:after{content:'';display:block;border-top:1px solid #222;-ms-flex:0 0 100%;flex:0 0 100%}.footer-top > .container:after{margin-top:2rem}#footer .widget-title{font-size:1rem;margin-bottom:1.25rem;text-transform:none}#footer .footer-main>.container{padding-top:70px;padding-bottom:0}@media (min-width:992px){.footer-main .col-lg-3:last-child{text-align:right}}#footer .footer-bottom{font-size:1em}.newsletter-popup-form{position:relative;max-width:740px}sup{font-size:54%}.fixed-header #header .header-main{background:none}.home-banner-thumb{position:absolute;bottom:2.6vw;right:0;width:24% !important;z-index:3}.home-banner-thumb .owl-item{cursor:pointer}.home-banner-thumb img{border:3px solid rgba(255,255,255,0.5)}.home-banner-thumb .synced img{border-color:#fff}.home-banner ul.scene li.layer:first-child{display:flex !important;align-items:center}.porto-ibanner.has-parallax-bg > img{width:58%}.wpb_wrapper .top-icon .porto-just-icon-wrapper{margin-bottom:2rem}.animation-spin{animation:spin 15s infinite linear}.animation-wave{animation:wave 15s 0.1s infinite linear}@media (max-width:575px){.right-0-mobile{right:0 !important;padding-right:20px}}.rtl .home-banner-thumb{left:0}
+</style>
+<link rel='stylesheet' id='styles-child-css'  href='https://www.imperiovcc.com/wp-content/themes/porto-child/style.css?ver=5.5.3' media='all' />
+
+<style>
+#projectThumbs .project .project-image .intrinsic div img {
+filter: url("data:image/svg+xml;utf8,<svg%20xmlns = 'http://www.w3.org/2000/svg'><filte…200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale");
+filter: gray;
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+}
+
+#projectThumbs .project .project-image .intrinsic:hover img {
+filter: grayscale(0%);
+-webkit-filter: grayscale(0%);
+filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+}
+ 
+  </style>
+<script type="text/javascript"> The function to change the class
+	var changeClass = function (r,className1,className2) {
+	    var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+	    if( regex.test(r.className) ) {
+	        r.className = r.className.replace(regex,' '+className2+' ');
+	    }
+	    else{
+	        r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+	    }
+	    return r.className;
+	};  
+ 
+	//  Creating our button for smaller screens
+	var menuElements = document.getElementById('navigation');
+	var htmlElement = document.getElementsByTagName("html")[0]
+	menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true">Menu</button>');
+	// Adding a JS class when JS is activated
+	changeClass(document.getElementsByTagName("html")[0], 'no-js', 'js');
+	 
+	//  Toggle the class on click to show / hide the menu
+	document.getElementById('menutoggle').onclick = function() {
+	    changeClass(this, 'navtoogle active', 'navtoogle');
+	}
+	 
+// document click to hide the menu	credits to http://inpx.it/13WjECm
+	document.onclick = function(e) {
+	    var mobileButton = document.getElementById('menutoggle'),
+	        buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+	 
+	    if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+	        changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+	    }
+	}
+</script>
+
+<!--Start of Tawk.to Script (0.3.3)-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{};
+var Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/604e3012f7ce1827092ff58f/1f0omnies';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script (0.3.3)-->
+	</head>
+<header>
+        		<div id="header" class="header">
+
+        		      <section id="footer"><img src="logo.png">
+            <section>
+              <ul class="icons">
+                <li><a href="https://wa.me/5804246669894" class="icon fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-behance"><span class="label">Behance</span></a></li>
+                <li><a href="https://www.facebook.com/Arquiru/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="mailto:arq.victorrojas2716@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+              </ul>
+            </section>
+          </section>
+      </div>
+
+</header>
+
+<div class="container--head">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="1.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Creamos la mejor experiencia para ti!</h3> Desarrollamos proyectos de corto y largo alcance.
+        </div>
+      </div>
+      <div class="item">
+        <img src="2.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Arquitectura y diseño...</h3> Visualiza los mejores espacios que desearias tener antes de ejecutarlos.
+        </div>
+      </div>
+      <div class="item">
+        <img src="3.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Diseño industrial...</h3> Desde diseño a la ejecución de tu proyecto.
+        </div>
+      </div>
+      <div class="item">
+        <img src="4.jpg" alt="..." style="width:100%">
+        <div class="carousel-caption">
+          <h3>Trabajo especial de grado...</h3> Tenemos todo lo que necesitas para desarrollar tu tesis.
+        </div>
+      </div>
+      <div class="item">
+        <img src="5.jpg" alt="05.jpg" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Tienes una idea? Contactanos nosotros te apoyamos en tu emprendimiento</h3> La creatividad abre un mundo ilimitado de oportunidades.
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</div>
+
+
+
+<!-- Fontawesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+  
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,300' rel='stylesheet' type='text/css'>
+
+
+  		<nav id="navigation" class="nav" role="navigation" onclick="">
+			<ul>
+				<li><a href="index.html">Proyectos</a></li>
+				<li><a href="animacion.html">Animación</a></li>
+				<li><a href="vr.html">Realidad Virtual</a></li>
+				<li><a href="clientes.html">Clientes</a></li>
+				<li><a href="contacto.html">Contactos</a></li>
+			</ul>
+		</nav>
+    <script  src="js/index.js"></script>
+
+<div id="portfolio">
+	 <div class="nav-bar-sep d-lg-none"></div>
+
+<div class="outer-container home-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/1.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Vivienda Barbot</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Freelancer</a></li>
+                            <li><a href="#">Brasil</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/2.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Pier Gaiti & Arq.Dayana Jimenez</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/3.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Auditorio</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Migración</a></li>
+                            <li><a href="#">Perú</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/4.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Vivienda modular</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Planta 3D</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/5.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq. Oscar Vera</a></li>
+                            <li><a href="#">Merida <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/6.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq. Oscar Vera</a></li>
+                            <li><a href="#">Merida <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/7.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Remodelación de Apartamento</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Freelancer</a></li>
+                            <li><a href="#">E.E.U.U.</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/8.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Restaurant</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arquidigital</a></li>
+                            <li><a href="#">Maracaibo<br/>Venezuela</a></a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/9.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Farmacia SAAS</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arquidigital</a></li>
+                            <li><a href="#">Maracaibo<br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/10.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq. Jesus Torrealba</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/11.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Susana Carruyo</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/12.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Roberto Leon</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+             <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/13.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Complejo turistico Paraguaná</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Freelancer</a></li>
+                            <li><a href="#">Falcón <br/> Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/14.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Aula Magna</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Universidad Rafael Urdaneta</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/15.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Complejo Turistico de Paraguaná</a></li>
+                            <li><a href="#">Falcón <br/> Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/16.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Vivienda unifamiliar</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Vista Aerea 3D</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/17.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Vivienda unifamiliar</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Propuesta</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/18.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Susana Carruyo</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/19.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Susana Carruyo</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/20.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Oscar Vera</a></li>
+                            <li><a href="#">Merida<br/>Venezuela</a></a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/21.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Maria Sanchez</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/22.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Remodelacón de Apartamento</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Freelancer</a></li>
+                            <li><a href="#">E.E.U.U.</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/23.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Hadia El Kadi</a></li>
+                            <li><a href="#">Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/24.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Pier Gaiti & Arq.Dayana Jimenez</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/25.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">T.E.G.</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Arq.Pier Gaiti & Arq.Dayana Jimenez</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->            <div class="col-12 col-md-6 col-lg-3 no-padding">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="images/26.jpg" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <h3><a href="#">Cafetin</a></h3>
+
+                        <ul class="flex flex-wrap justify-content-center">
+                            <li><a href="#">Ministerio del Ambiente</a></li>
+                            <li><a href="#">Maracaibo <br/>Venezuela</a></li>
+                        </ul>
+                    </div><!-- .entry-content -->
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container-fluid -->
+</div><!-- .outer-container -->
+
+
+<div id="footer">
+	          <section id="footer">
+              <center>
+              <ul class="copyright">
+                <li>&copy; Derechos Reservados .:.2019.:.</li><li>Design: <a href="#">Arq.Victor Rojas C.</a></li>
+              </ul>
+          </center>
+            </section>
+          </section>
+
+</div>
+
+
+      </div>
+
+	</body>
+</html>
